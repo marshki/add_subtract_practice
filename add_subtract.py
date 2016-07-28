@@ -32,32 +32,44 @@ def random_addition():
 	input("Are you ready to play? For a GOOD time press the Enter key. ") # Ask user to start program
 	print()
 
-	count += 1
+	while True: 
+		count += 1
 	
 	# Addition logic 
-	c = randint(10,20)	# Generate a pseudo-random number between 10 and 20 
-	b = randint(0,c)	# Generate a pseudo-random number between 0 and c
-	a = c - b 		# Make a + b = c 
+		c = randint(10,20)	# Generate a pseudo-random number between 10 and 20 
+		b = randint(0,c)	# Generate a pseudo-random number between 0 and c
+		a = c - b 		# Make a + b = c 
 
 	# Addition problem 
-	addition_problem = '%d + %d = ' % (a,b)
-	correct_answer = c
+		addition_problem = '%d + %d = ' % (a,b)
+		correct_answer = c
 
 	# Start timer 
-	start_time = mktime(localtime())
+		start_time = mktime(localtime())
 
 	# Accept user input 
-
-	user_answer = input("%3d." % count + addition_problem)
+		user_answer = input("%3d." % count + addition_problem)
 
 	# End timer 
+		end_time = mktime(localtime())
 
-	end_time = mktime(localtime())
-		
+	# End loop when user wants to quit 
+		if user_answer.lower() == 'q': 
+			count -= 1 
+			break
+
+	# If too long, answer is marked as wrong 
+		if end_time - start_time > time_limit:
+			print("You took too long!")
+			continue  
+	# Checking that the above is working 
+	print(count)
 	print(addition_problem, correct_answer)	
 	print(start_time, user_answer, end_time)
 ()
 
+
+# Testing 
 random_addition()
 random_addition()
 random_addition()
