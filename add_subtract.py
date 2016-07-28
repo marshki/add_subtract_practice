@@ -42,8 +42,20 @@ def random_addition():
 	# Addition problem 
 	addition_problem = '%d + %d = ' % (a,b)
 	correct_answer = c
+
+	# Start timer 
+	start_time = mktime(localtime())
+
+	# Accept user input 
+
+	user_answer = input("%3d." % count + addition_problem)
+
+	# End timer 
+
+	end_time = mktime(localtime())
 		
 	print(addition_problem, correct_answer)	
+	print(start_time, user_answer, end_time)
 ()
 
 random_addition()
