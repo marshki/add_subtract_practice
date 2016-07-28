@@ -62,6 +62,16 @@ def random_addition():
 		if end_time - start_time > time_limit:
 			print("You took too long!")
 			continue  
+		try: 
+			if int(user_answer) == correct_answer: 
+				right +=1	
+				print("Right!")
+			else: 
+				print("Wrong!")	
+				print("Right!")	
+		except: 
+			print("Badness!")
+
 	# Checking that the above is working 
 	print(count)
 	print(addition_problem, correct_answer)	
