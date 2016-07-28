@@ -39,7 +39,11 @@ def random_addition():
 	b = randint(0,c)	# Generate a pseudo-random number between 0 and c
 	a = c - b 		# Make a + b = c 
 
-	print(a,b,c)
+	# Addition problem 
+	addition_problem = '%d + %d = ' % (a,b)
+	correct_answer = c
+		
+	print(addition_problem, correct_answer)	
 ()
 
 random_addition()
