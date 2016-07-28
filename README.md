@@ -15,6 +15,8 @@ Program can be run directly from a shell with:
 
 Commit June 27, 2016 @ 23:36 
 
+GiHub service outage 10:16 PM - 27 Jul 2016. Fixing incomplete push. 
+
 ## License 
 
 MIT license. 'Nuff said. 
