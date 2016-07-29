@@ -72,6 +72,14 @@ def random_addition():
 		except: 
 			print("Badness!")
 
+	percent = round(right/count * 100)
+
+	print("You answered % d correct out of %d." %(right, count))
+	print("That\'s %d%%." % (percent,)),
+
+	if right == count and right >= 1: 
+		print("Awesome")
+
 	# Checking that the above is working 
 	print(count)
 	print(addition_problem, correct_answer)	
