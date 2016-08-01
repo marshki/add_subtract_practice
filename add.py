@@ -64,3 +64,4 @@ def random_addition():
 	print("That\'s %d%%." % (percent,)),
 
 random_addition()
+

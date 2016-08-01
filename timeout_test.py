@@ -8,7 +8,7 @@ def check():
 	time.sleep(2)
 	if answer != None: 
 		return 
-	print("Too slow!")
+		print("Too slow!")
 
 Thread(target = check).start()
 
